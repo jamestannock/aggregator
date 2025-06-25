@@ -1,5 +1,6 @@
+```python
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from openai import OpenAI
 import pdfplumber
 from dotenv import load_dotenv
@@ -44,6 +45,11 @@ def index():
             obligations = extract_obligations(desc)
     return render_template("index.html", obligations=obligations)
 
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "ok"})
+
 if __name__ == "__main__":
     # Accessible only on localhost by default
     app.run(host="127.0.0.1", port=5000, debug=True)
+```
