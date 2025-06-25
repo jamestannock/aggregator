@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <>
-      <h2 className="text-2xl font-semibold mb-4">About Aggregator</h2>
+      <h2 className="text-3xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">About Aggregator</h2>
       <p className="mb-4">
         Aggregator analyses legislation PDFs with OpenAI’s GPT-4o to surface
         company-specific compliance obligations.

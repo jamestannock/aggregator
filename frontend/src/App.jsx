@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 mt-8 bg-white/80 backdrop-blur-lg rounded-xl shadow-xl">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route

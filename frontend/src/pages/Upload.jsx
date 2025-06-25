@@ -27,7 +27,7 @@ export default function Upload({ setObligations, setCompany }) {
 
   return (
     <>
-      <h2 className="text-2xl font-semibold mb-4">Upload Legislation</h2>
+      <h2 className="text-3xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">Upload Legislation</h2>
       <form onSubmit={submit} className="space-y-4">
         <div>
           <label className="block mb-1 font-medium">Company Name</label>
@@ -42,7 +42,7 @@ export default function Upload({ setObligations, setCompany }) {
         {file && <p className="text-sm text-gray-500">Selected: {file.name}</p>}
         <button
           disabled={loading}
-          className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 disabled:opacity-50"
+          className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-2 rounded shadow hover:opacity-90 disabled:opacity-50"
         >
           {loading ? "Processing…" : "Extract Obligations"}
         </button>
