@@ -1,13 +1,16 @@
+// frontend/src/pages/Results.jsx
 import { Link } from "react-router-dom";
 import ObligationList from "../components/ObligationList";
 
 export default function Results({ company, obligations }) {
-  if (!company)
+  console.log("Rendering Results with:", { company, obligations });
+  if (!company || !obligations) {
     return (
       <p>
-        No data, <Link to="/upload" className="text-blue-600">upload first.</Link>
+        No data, <Link to="/upload">upload first.</Link>
       </p>
     );
+  }
   return (
     <>
       <h2 className="text-2xl font-semibold mb-4">
